@@ -29,6 +29,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
@@ -68,11 +69,16 @@
           <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </button>
 
-        <a href="#" class="logo">
+        <a href="#" class="logo scroll-scale">
           <img src="./assets/images/logo.png" width="160" height="50" alt="Bradosti - Home">
         </a>
 
-        <ul class="navbar-list">
+
+
+
+
+
+        <ul class="navbar-list ">
 
           <li class="navbar-item">
             <a href="#home" class="navbar-link hover-underline active">
@@ -81,13 +87,16 @@
             </a>
           </li>
 
-
-
           <li class="navbar-item">
             <a href="#about" class="navbar-link hover-underline">
               <span class="span">About Us</span>
             </a>
           </li>
+
+         
+
+
+
 
           <li class="navbar-item">
             <a href="#offers" class="navbar-link hover-underline">
@@ -105,17 +114,30 @@
 
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link hover-underline">
+            <a href="#contact" class="navbar-link hover-underline">
 
 
               <span class="span">Contact</span>
             </a>
           </li>
+          <li class="navbar-item">
+
+            <div class="radio-input">
+             <p style="margin: auto; margin-left: 0;">Need us for :</p>
+              <input value="value-1" name="value-radio" id="value-1" type="radio">
+              <label for="value-1"><a href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Rent</a></label>
+              <input value="value-2" name="value-radio" id="value-2" type="radio">
+              <label for="value-1"><a href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Sale</a></label>
+               <input value="value-3" name="value-radio" id="value-3" type="radio">
+               <label for="value-1"><a href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Management</a></label>
+              </div>
+           
+          </li>
 
         </ul>
 
-        <div class="text-center">
-          <p class="headline-1 navbar-title">Visit Us</p>
+        <div class="text-center scroll-scale">
+          <p class="headline-1 navbar-title scroll-scale">Visit Us</p>
 
           <address class="body-4">
             Business Bay, Dubai, UAE.
@@ -123,16 +145,25 @@
 
           <p class="body-4 navbar-text">Available: 24/7</p>
 
-          <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">kjhgfdvsdftgyh.com</a>
+
 
           <br />
           <hr>
           <br />
-          <p class="contact-label">Relax, you're booking a Bradosti</p>
+          <p class="contact-label scroll-scale">Relax, you're booking a Bradosti</p>
 
           <a href="tel:+88123123456" class="body-1 contact-number hover-underline">
             + 971 50 700 4348
           </a>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/people/Bradosti-Real-Estate/61559642034705/?mibextid=ZbWKwL"><i
+                class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/bradostiproperty/?igsh=M2UzaWFnY21tMHVz"><i
+                class="bx bxl-instagram"></i></a>
+            <a href="https://www.tiktok.com/@brabosti?_t=8mqKOENNDaa&_r=1"><i class='bx bxl-tiktok'></i></a>
+            <a href="https://www.snapchat.com/add/bradostipropert?share_id=o9S-RYujrz4&locale=ar-AE"><i
+                class='bx bxl-snapchat'></i></a>
+          </div>
         </div>
 
       </nav>
@@ -170,7 +201,7 @@
             <div class="slider-bg">
               <img src="./assets/images/hero2.jpg" width="1880" height="950" alt="" class="img-cover">
             </div>
-            <h1 class="display-1 hero-title slider-reveal">
+            <h1 class="display-1 hero-title slider-reveal ">
               Find a place that touches your soul
             </h1>
 
@@ -198,8 +229,8 @@
       -->
 
       <section class="section menu" aria-label="menu-label" id="about">
-        <div class="container">
-          <h2 class="headline-1 section-title text-center">About Us</h2>
+        <div class="container scroll-scale">
+          <h2 class="headline-1 section-title text-center ">About Us</h2>
           <p style="text-align: center;">If you are looking for an apartment or property to buy or rent,
             We are here for you.
           </p>
@@ -213,57 +244,67 @@
 
       <section class="section event bg-black-10" aria-label="event" id="offers">
         <div class="container">
-          <h2 class="section-title headline-1 text-center">Latest Offers</h2>
+          <!-- <h2 class="section-title headline-1 text-center">Latest Offers</h2> -->
 
           <ul class="grid-list">
 
-            <li>
+            <li class="scroll-scale ">
               <div class="event-card has-before ">
-
-                <div class="card-banner img-holder" style="--width: 350; --height: 310;">
+                <div class="card-banner img-holder imageBorder" style="--width: 350; --height: 310; position:relative">
                   <img src="./assets/images/offer1.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-
-
                 </div>
-
-
-
+                <div class="moreHref">
+                  <a href="p1.html"><ion-icon name="arrow-forward-outline"></ion-icon></a>
+                </div>
               </div>
             </li>
 
-            <li>
+            <li class="scroll-scale">
               <div class="event-card has-before ">
 
-                <div class="card-banner img-holder" style="--width: 350; --height: 310;">
+                <div class="card-banner img-holder imageBorder" style="--width: 350; --height: 310;position:relative">
                   <img src="./assets/images/offer2.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-
-
                 </div>
-
+                <div class="moreHref">
+                  <a href="p2.html"><ion-icon name="arrow-forward-outline"></ion-icon></a>
+                </div>
 
 
               </div>
             </li>
 
 
-            <li class="hiddenForMobile">
+            <li class="scroll-scale ">
               <div class="event-card has-before ">
 
-                <div class="card-banner img-holder" style="--width: 350; --height: 310;">
-                  <img src="./assets/images/offer4.jpg" width="350" height="450" loading="lazy"
+                <div class="card-banner img-holder imageBorder" style="--width: 350; --height: 310;">
+                  <img src="./assets/images/offer3.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-
-
                 </div>
-
+                <div class="moreHref">
+                  <a href="p3.html"><ion-icon name="arrow-forward-outline"></ion-icon></a>
+                </div>
 
               </div>
             </li>
 
 
+            <li class="scroll-scale hiddenForLab">
+              <div class="event-card has-before ">
 
+                <div class="card-banner img-holder imageBorder" style="--width: 350; --height: 310;position:relative">
+                  <img src="./assets/images/offer4.jpg" width="350" height="450" loading="lazy"
+                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
+                </div>
+                <div class="moreHref">
+                  <a href="p4.html"><ion-icon name="arrow-forward-outline"></ion-icon></a>
+                </div>
+
+
+              </div>
+            </li>
           </ul>
 
 
@@ -277,13 +318,13 @@
 
       <section class="section menu" aria-label="menu-label" id="partners">
         <div class="container">
-          <h2 class="headline-1 section-title text-center">our product</h2>
-       
+          <!-- <h2 class="headline-1 section-title text-center">our product</h2> -->
+
           <div class="videoSliderWrapper">
             <div class="videoslider">
               <video src="./assets/video/v1.mp4" controls autoplay muted loop id="slider1"></video>
-              <video src="./assets/video/v2.mp4" controls autoplay  muted loop id="slider2"></video>
-              <video src="./assets/video/v1.mp4" controls autoplay  muted loop id="slider3"></video>
+              <video src="./assets/video/v2.mp4" controls autoplay muted loop id="slider2"></video>
+              <video src="./assets/video/v1.mp4" controls autoplay muted loop id="slider3"></video>
             </div>
             <div class="sliderNav">
               <a href="#slider1"> </a>
@@ -302,7 +343,7 @@
 
       <section class="section menu" aria-label="menu-label" id="partners">
         <div class="container">
-          <h2 class="headline-1 section-title text-center">Our Partners</h2>
+          <!-- <h2 class="headline-1 section-title text-center">Our Partners</h2> -->
           <div class="logos">
             <div class="logoSlide">
               <img src="./assets/images/s1.png" />
@@ -327,6 +368,26 @@
 
 
 
+      <section class="section menu contactus" aria-label="menu-label" id="contact">
+        <div class="container scroll-scale">
+          <h2 class="headline-1 section-title text-center ">contact with Us</h2>
+          <p style="text-align: center;">
+            We have an integrated team to serve you at any time
+          </p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/people/Bradosti-Real-Estate/61559642034705/?mibextid=ZbWKwL"><i
+                class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/bradostiproperty/?igsh=M2UzaWFnY21tMHVz"><i
+                class="bx bxl-instagram"></i></a>
+            <a href="https://www.tiktok.com/@brabosti?_t=8mqKOENNDaa&_r=1"><i class='bx bxl-tiktok'></i></a>
+            <a href="https://www.snapchat.com/add/bradostipropert?share_id=o9S-RYujrz4&locale=ar-AE"><i
+                class='bx bxl-snapchat'></i></a>
+          </div>
+
+        </div>
+      </section>
+
+
     </article>
   </main>
 
@@ -343,7 +404,7 @@
   -->
 
 
-  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+  <a href="#top" class="back-top-btn active " aria-label="back to top" data-back-top-btn>
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
   </a>
 
