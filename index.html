@@ -46,12 +46,6 @@
 
 
 
-
-
-
-
-
-
   <!-- 
     - #HEADER
   -->
@@ -86,17 +80,27 @@
               <span class="span">Home</span>
             </a>
           </li>
+          <li class="navbar-item">
 
+            <div class="radio-input">
+              <p style="margin: auto; margin-left: 0;">Need us for :</p>
+              <input value="value-1" name="value-radio" id="value-1" type="radio">
+              <label for="value-1"><a
+                  href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Rent</a></label>
+              <input value="value-2" name="value-radio" id="value-2" type="radio">
+              <label for="value-1"><a
+                  href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Sale</a></label>
+              <input value="value-3" name="value-radio" id="value-3" type="radio">
+              <label for="value-1"><a
+                  href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Management</a></label>
+            </div>
+
+          </li>
           <li class="navbar-item">
             <a href="#about" class="navbar-link hover-underline">
               <span class="span">About Us</span>
             </a>
           </li>
-
-         
-
-
-
 
           <li class="navbar-item">
             <a href="#offers" class="navbar-link hover-underline">
@@ -120,19 +124,7 @@
               <span class="span">Contact</span>
             </a>
           </li>
-          <li class="navbar-item">
 
-            <div class="radio-input">
-             <p style="margin: auto; margin-left: 0;">Need us for :</p>
-              <input value="value-1" name="value-radio" id="value-1" type="radio">
-              <label for="value-1"><a href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Rent</a></label>
-              <input value="value-2" name="value-radio" id="value-2" type="radio">
-              <label for="value-1"><a href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Sale</a></label>
-               <input value="value-3" name="value-radio" id="value-3" type="radio">
-               <label for="value-1"><a href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Management</a></label>
-              </div>
-           
-          </li>
 
         </ul>
 
@@ -140,7 +132,11 @@
           <p class="headline-1 navbar-title scroll-scale">Visit Us</p>
 
           <address class="body-4">
+            <div class="center-body">
+              <div class="loader-shape-3"></div>
+            </div>
             Business Bay, Dubai, UAE.
+           
           </address>
 
           <p class="body-4 navbar-text">Available: 24/7</p>
@@ -182,9 +178,6 @@
   </header>
 
 
-
-
-
   <main>
     <article>
 
@@ -219,11 +212,6 @@
       </section>
 
 
-
-
-
-
-
       <!-- 
         - #ABOUT
       -->
@@ -245,7 +233,7 @@
       <section class="section event bg-black-10" aria-label="event" id="offers">
         <div class="container">
           <!-- <h2 class="section-title headline-1 text-center">Latest Offers</h2> -->
-
+          <h3 style="text-align: center;font-family:Forum;">For Rent</h3>
           <ul class="grid-list">
 
             <li class="scroll-scale ">
@@ -274,8 +262,9 @@
 
               </div>
             </li>
-
-
+          </ul>
+          <h3 style="text-align: center; font-family:Forum;">For Sale</h3>
+          <ul class="grid-list">
             <li class="scroll-scale ">
               <div class="event-card has-before ">
 
@@ -314,9 +303,9 @@
 
 
 
-      <!-- ................................ -->
+      <!-- ..............video.................. -->
 
-      <section class="section menu" aria-label="menu-label" id="partners">
+      <section class="section menu" aria-label="menu-label" id="video">
         <div class="container">
           <!-- <h2 class="headline-1 section-title text-center">our product</h2> -->
 
@@ -366,13 +355,13 @@
         </div>
       </section>
 
-
+      <!-- contact-->
 
       <section class="section menu contactus" aria-label="menu-label" id="contact">
         <div class="container scroll-scale">
-          <h2 class="headline-1 section-title text-center ">contact with Us</h2>
-          <p style="text-align: center;">
-            We have an integrated team to serve you at any time
+          <h2 class="headline-1 section-title text-center ">Contact Us</h2>
+          <p style="text-align: center; margin-bottom: 15px;">
+            We have an expert team to help you
           </p>
           <div class="social-icons">
             <a href="https://www.facebook.com/people/Bradosti-Real-Estate/61559642034705/?mibextid=ZbWKwL"><i
@@ -409,12 +398,18 @@
   </a>
 
 
-  <a href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0"
+  <!-- 
+    - #whatsApp
+  -->
+
+  <a href="https://wa.me/message/3VZO266OF2CWM1"
     class="whatsAppIcon active" aria-label="back to top" whats-btn>
     <ion-icon name="logo-whatsapp"></ion-icon>
   </a>
 
-
+  <a href="tel:+971501525520" class="callUs active" aria-label="back to top" whats-btn>
+    <ion-icon name="call-outline"></ion-icon>
+  </a>
 
 
 

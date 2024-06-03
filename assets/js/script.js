@@ -96,3 +96,24 @@ scrollscale.forEach((el)=>observe.observe(el))
 
 const scrolltop=document.querySelectorAll('.scroll-top')
 scrolltop.forEach((el)=>observe.observe(el))
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+function rotate(){
+  var lastChild=$('.sliderP div:last-child').clone();
+  $('.sliderP div').removeClass('firstSlide')
+  $('.sliderP div:last-child').remove();
+  $('.sliderP').prepend(lastChild)
+  $(lastChild).addClass('firstSlide')
+}
+
+window.setInterval(function(){
+  rotate()
+},4000);
