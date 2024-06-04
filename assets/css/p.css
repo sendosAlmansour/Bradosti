@@ -3,8 +3,15 @@ body {
   margin-left: 0;
   margin-right: 0;
 }
-
-
+.BackToHome{
+  background-color: hsla(30, 8%, 5%, 1);
+margin: 0;
+border: none;
+}
+.BackToHome a{
+ color: #f0eeef;
+ font-size: 50px;
+}
 
 
 
@@ -31,234 +38,73 @@ body {
 
 
 /* ///////   slider //////////////// */
-/* .slider-frame {
+
+main{
+  width: 93%;
+  height: 450px;
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 0px 0px 3px grey;
+  position: relative;
   overflow: hidden;
-  height: 800px;
-  width: 1200px;
-  margin-left: 360px;
-  margin-top: 20px;
+}
+.slide{
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  position: absolute;
+}
+.nav{
+  text-align: center;
+  margin-top: 15px;
+}
+.offerInfo button {
+  font-size: 20px;
+  background-color: hsl(37.92deg 63.45% 61.37%);
+  color: white;
+  width: 35px;
+  height: 35px;
+  opacity: 0.5;
+  border: 1px solid #faa112;
+  box-shadow: 0px 10px 10px 0px rgba(218, 145, 10, 0.966);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.prev{
+  animation: bounce_1 1s infinite;
+}
+.next{
+  animation: bounce_2 1s infinite;
 }
 
-@-webkit-keyframes slider-animation {
-  0% {
-    left: 0px;
-  }
-
-  10% {
-    left: 0px;
-  }
-
-  20% {
-    left: 1200px;
-  }
-
-  30% {
-    left:1200px;
-  }
-
-  40% {
-    left: 2400px;
+@keyframes bounce_1 {
+  0%,
+    100% {
+    transform: translateY(-20%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
 
   50% {
-    left: 2400px;
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+@keyframes bounce_2 {
+  50%,
+    100% {
+    transform: translateY(-20%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
 
-  60% {
-    left: 1200px;
-  }
-
-  70% {
-    left: 1200px;
-  }
-
-  80% {
-    left: 0px;
-  }
-
-  90% {
-    left: 0px;
-  }
-
-  100% {
-    left: 0px;
+  0% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
 
-.slider-images{
-  width: 3600px;
-  height: 800px;
-  margin: 0 0 0 -2400px;
-  position: relative;
-  -webkit-animation-name: slider-animation ;
-  -webkit-animation-duration: 33s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  -webkit-animation-play-state: running;
-}
-.img-container{
-  height: 800px;
-  width: 1200px;
-  position: relative;
-  float: left;
-}
- */
-
-.container {
-  width: 100vw;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sliderP {
-  height: 750px;
-  width: 100%;
-  display: flex;
-  perspective: 1000px;
-  position: relative;
-  align-items: center;
-}
-
-.box1 {
-  background: url('../images/offer1.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box2 {
-  background: url('../images/offer1.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box3 {
-  background: url('../images/offer2.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box4 {
-  background: url('../images/offer3.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box5 {
-  background: url('../images/offer4.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box5 {
-  background: url('../images/offer1.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box5 {
-  background: url('../images/offer2.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.sliderP [class*="box"] {
-  overflow: hidden;
-  border-radius: 10px;
-  transition: all 1.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  position: absolute;
-}
-
-.sliderP [class*="box"]:nth-child(7),
-.sliderP [class*="box"]:nth-child(1) {
-  width: 150vh;
-  height: 60vh;
-  transform: scale(0.2) translate(-50%, -50%);
-  top: 10%;
-  z-index: 1;
-}
-
-.sliderP [class*="box"]:nth-child(2),
-.sliderP [class*="box"]:nth-child(6) {
-  width: 150vh;
-  height: 60vh;
-  transform: scale(0.4) translate(-50%, -50%);
-  top: 20%;
-  z-index: 2;
-}
-
-.sliderP [class*="box"]:nth-child(3),
-.sliderP [class*="box"]:nth-child(5) {
-  width: 150vh;
-  height: 60vh;
-  transform: scale(0.6) translate(-50%, -50%);
-  top: 30%;
-  z-index: 3;
-}
-
-.sliderP [class*="box"]:nth-child(4) {
-  width: 60vw;
-  height: 60vh;
-  transform: scale(1) translate(-50%, -50%);
-  border-color: #cb9a13;
-  color: #f0eeef;
-  top: 50%;
-  z-index: 4;
-}
-
-.sliderP [class*="box"]:nth-child(1) {
-  left: -13%;
-}
-
-.sliderP [class*="box"]:nth-child(2) {
-  left: -5%;
-}
-
-.sliderP [class*="box"]:nth-child(3) {
-  left: 10%;
-}
-
-.sliderP [class*="box"]:nth-child(4) {
-  left: 50%;
-}
-
-.sliderP [class*="box"]:nth-child(5) {
-  left: 71%;
-}
-
-.sliderP [class*="box"]:nth-child(6) {
-  left: 85%;
-}
-
-.sliderP [class*="box"]:nth-child(7) {
-  left: 100%;
-}
 
 
-.sliderP .firstSlide{
-  -webkit-animation: firstChild 1s;
-  animation: firstChild 1s;
-}
-@-webkit-keyframes firstChild{
-  0%{left: 100%; transform: scale(0.2) translate(-50% , -50%);}
-  100%{left: -13%; transform: scale(0.2) translate(-50% ,-50%);}
-}
-@keyframes firstChild{
-  0%{left: 100%; transform: scale(0.2) translate(-50% , -50%);}
-  100%{left: -13%; transform: scale(0.2) translate(-50% ,-50%);}
-}
-
-
-
-
-
-
-
-
-
-
-
+/* //////////////////////////////////////////////// */
 
 .recipe-info {
   padding: 10px;
@@ -276,7 +122,7 @@ body {
 
 .recipe-icons {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin: 2rem 0;
   text-align: center;
@@ -284,6 +130,7 @@ body {
 
 .recipe-info h2 {
   color: hsl(37.92deg 63.45% 61.37%);
+  text-align: center;
 }
 
 .recipe-icons i {
