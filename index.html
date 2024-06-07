@@ -30,10 +30,12 @@
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Marhey:wght@300..700&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
-<body id="top">
+<body id="top" class="topFont">
 
   <!-- 
     - #PRELOADER
@@ -42,39 +44,39 @@
   <div class="preload" data-preaload>
     <div class="gearbox">
       <div class="overlay"></div>
-        <div class="gear one">
-          <div class="gear-inner">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="gear two">
-          <div class="gear-inner">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="gear three">
-          <div class="gear-inner">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="gear four large">
-          <div class="gear-inner">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
+      <div class="gear one">
+        <div class="gear-inner">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
       </div>
-      <h2>BRADOSTI</h2>
+      <div class="gear two">
+        <div class="gear-inner">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="gear three">
+        <div class="gear-inner">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="gear four large">
+        <div class="gear-inner">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+    <h2 id="preloadH2">BRADOSTI</h2>
   </div>
 
 
@@ -89,9 +91,18 @@
       <a href="#" class="logo">
         <img src="./assets/images/logo.png" width="160" height="50" alt="Bradosti - Home">
       </a>
-
-      <nav class="navbar" data-navbar>
-
+      <div style="margin-left: auto; display: flex; gap: 3px;">
+                 <button class="tooltip" id="arabic" >
+          <img src="./assets/images/ueaflag.png"/>
+       
+                </button>
+        <button class="tooltip" id="English" >
+          <img src="./assets/images/usaflag.png"/>
+      
+        </button>
+      </div>
+      <nav class="navbar1" data-navbar>
+      
         <button class="close-btn" aria-label="close menu" data-nav-toggler>
           <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </button>
@@ -105,56 +116,55 @@
 
 
 
-        <ul class="navbar-list ">
+        <ul class="navbar1-list ">
 
-          <li class="navbar-item">
-            <a href="#home" class="navbar-link hover-underline active">
-
-              <span class="span">Home</span>
+          <li class="navbar1-item">
+            <a href="#home" class="navbar1-link hover-underline active">
+              <span class="span" id="home">Home</span>
             </a>
           </li>
-          <li class="navbar-item">
+          <li class="navbar1-item" id="needusDiv">
 
             <div class="radio-input">
-              <p style="margin: auto; margin-left: 0;">Need us for :</p>
+              <p style="margin: auto; margin-left: 0;" id="need">Need us for :</p>
               <input value="value-1" name="value-radio" id="value-1" type="radio">
-              <label for="value-1"><a
+              <label for="value-1"><a id="val1A"
                   href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Rent</a></label>
               <input value="value-2" name="value-radio" id="value-2" type="radio">
-              <label for="value-1"><a
+              <label for="value-1"><a id="val2A"
                   href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Sale</a></label>
               <input value="value-3" name="value-radio" id="value-3" type="radio">
-              <label for="value-1"><a
+              <label for="value-1"><a id="val3A"
                   href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">Management</a></label>
             </div>
 
           </li>
-          <li class="navbar-item">
-            <a href="#about" class="navbar-link hover-underline">
-              <span class="span">About Us</span>
+          <li class="navbar1-item">
+            <a href="#about" class="navbar1-link hover-underline">
+              <span class="span" id="About">About Us</span>
             </a>
           </li>
 
-          <li class="navbar-item">
-            <a href="#offers" class="navbar-link hover-underline">
+          <li class="navbar1-item">
+            <a href="#offers" class="navbar1-link hover-underline">
 
-              <span class="span">Latest Offers</span>
+              <span class="span" id="Latest">Latest Offers</span>
             </a>
           </li>
 
-          <li class="navbar-item">
-            <a href="#partners" class="navbar-link hover-underline">
+          <li class="navbar1-item">
+            <a href="#partners" class="navbar1-link hover-underline">
 
-              <span class="span">Our Partners</span>
+              <span class="span" id="Partners">Our Partners</span>
             </a>
           </li>
 
 
-          <li class="navbar-item">
-            <a href="#contact" class="navbar-link hover-underline">
+          <li class="navbar1-item">
+            <a href="#contact" class="navbar1-link hover-underline">
 
 
-              <span class="span">Contact</span>
+              <span class="span" id="Contact">Contact</span>
             </a>
           </li>
 
@@ -162,7 +172,7 @@
         </ul>
 
         <div class="text-center scroll-scale">
-          <p class="headline-1 navbar-title scroll-scale">Visit Us</p>
+          <p class="headline-1 navbar1-title scroll-scale" id="Visit">Visit Us</p>
 
           <address class="body-4">
             <div class="center-body" style="overflow: hidden;border-radius: 20px;">
@@ -171,23 +181,21 @@
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.4777600896246!2d55.25769027521111!3d25.185901877718297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69d09681df43%3A0xc222838ff425a54!2sIris%20Bay%20-%20Business%20Bay%20-%20Dubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2s!4v1717517912249!5m2!1sen!2s"
                   height="250" style="border:0; width:100%;" allowfullscreen="" loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"></iframe>
-
               </div>
             </div>
-            Business Bay, Dubai, UAE.
-
+            <p id="locat"> Business Bay, Dubai, UAE</p>
           </address>
 
-          <p class="body-4 navbar-text">Available: 24/7</p>
+          <p class="body-4 navbar1-text" id="Available">Available: 24/7</p>
 
 
 
           <br />
           <hr>
           <br />
-          <p class="contact-label scroll-scale">Relax, you're booking a Bradosti</p>
+          <p class="contact-label scroll-scale" id="Relax">Relax, you're booking a Bradosti</p>
 
-          <a href="tel:+88123123456" class="body-1 contact-number hover-underline">
+          <a href="tel:+88123123456" class="body-1 contact-number hover-underline" id="phone">
             + 971 50 700 4348
           </a>
           <div class="social-icons">
@@ -233,7 +241,7 @@
             <div class="slider-bg">
               <img src="./assets/images/hero2.jpg" width="1880" height="950" alt="" class="img-cover">
             </div>
-            <h1 class="display-1 hero-title slider-reveal ">
+            <h1 class="display-1 hero-title slider-reveal " id="title">
               Find a place that touches your soul
             </h1>
 
@@ -257,8 +265,8 @@
 
       <section class="section menu" aria-label="menu-label" id="about">
         <div class="container scroll-scale">
-          <h2 class="headline-1 section-title text-center ">About Us</h2>
-          <p style="text-align: center;">If you are looking for an apartment or property to buy or rent,
+          <h2 class="headline-1 section-title text-center " id="aboutus">About Us</h2>
+          <p style="text-align: center;" id="aboutText">If you are looking for an apartment or property to buy or rent,
             We are here for you.
           </p>
 
@@ -273,13 +281,13 @@
       <section class="section event bg-black-10" aria-label="event" id="offers">
         <div class="container">
           <!-- <h2 class="section-title headline-1 text-center">Latest Offers</h2> -->
-          <h3 style="text-align: center;font-family:Forum;" class="h3inOffer">For Rent</h3>
+          <h3 style="text-align: center;" class="h3inOffer" id="forrent">For Rent</h3>
           <ul class="grid-list">
 
             <li class="scroll-scale ">
               <div class="event-card has-before ">
                 <div class="card-banner img-holder imageBorder" style="--width: 350; --height: 310; position:relative">
-                  <img src="./assets/images/offer1/1 (2).jpg" width="350" height="450" loading="lazy"
+                  <img src="./assets/images/offer1/1 (5).jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
                 </div>
                 <div class="moreHref">
@@ -303,7 +311,7 @@
               </div>
             </li>
           </ul>
-          <h3 style="text-align: center; font-family:Forum;" class="h3inOffer">For Sale</h3>
+          <h3 style="text-align: center; " class="h3inOffer" id="forSale">For Sale</h3>
           <ul class="grid-list">
             <li class="scroll-scale ">
               <div class="event-card has-before ">
@@ -399,8 +407,8 @@
 
       <section class="section menu contactus" aria-label="menu-label" id="contact">
         <div class="container scroll-scale">
-          <h2 class="headline-1 section-title text-center ">Contact Us</h2>
-          <p style="text-align: center; margin-bottom: 15px;">
+          <h2 class="headline-1 section-title text-center " id="ContactUs">Contact Us</h2>
+          <p style="text-align: center; margin-bottom: 15px;" id="ContactText">
             We have an expert team to help you
           </p>
           <div class="social-icons">

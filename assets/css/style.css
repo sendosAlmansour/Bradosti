@@ -188,15 +188,16 @@ html {
 body {
   background-color: var(--smoky-black-2);
   color: var(--white);
-  font-family: var(--fontFamily-dm_sans);
+  font-family: var(--fontFamily-forum);
   font-size: var(--fontSize-body-4);
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-5);
   overflow: hidden;
   height: 300vh;
+  
 }
-
-body.loaded {
+ 
+ body.loaded {
   overflow: overlay;
 }
 
@@ -228,7 +229,7 @@ body.nav-active {
 .title-3,
 .title-4 {
   color: var(--white);
-  font-family: var(--fontFamily-forum);
+  
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-2);
 }
@@ -310,7 +311,7 @@ body.nav-active {
 
 .contact-label {
   font-weight: var(--weight-bold);
-  font-family: 'Forum';
+  
   letter-spacing: 1px;
 }
 
@@ -561,7 +562,61 @@ body.nav-active {
 
 
 
-
+.tooltip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid transparent;
+  background-color: rgba(237, 149, 77, 0.08);
+  border-radius: 1.25em;
+  transition: all 0.2s linear;
+ }
+ 
+ .tooltip:hover {
+  box-shadow: 3.4px 2.5px 4.9px rgba(0, 0, 0, 0.025),
+   8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035),
+   17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045),
+   36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055),
+   99px 72px 143px rgba(0, 0, 0, 0.08);
+ }
+ 
+ .tooltip {
+  position: relative;
+  display: inline-block;
+ }
+ .tooltip img{
+  height: 20px;
+ }
+ 
+ .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 4em;
+  background-color: rgb(219 173 94 / 10%);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  left: 110%;
+ }
+ 
+ .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.253) transparent transparent;
+ }
+ 
+ .tooltip:hover .tooltiptext {
+  visibility: visible;
+ }
 
 /*-----------------------------------*\
   #PRELOAD
@@ -859,7 +914,7 @@ body.nav-active {
   animation-delay: 300ms;
 }
 
-.navbar {
+.navbar1 {
   background-size: cover;
   position: fixed;
   background-image: url(../images/burjKhalifa.jpg);
@@ -877,12 +932,12 @@ body.nav-active {
   transition: var(--transition-2);
 }
 
-.navbar.active {
+.navbar1.active {
   visibility: visible;
   transform: translateX(360px);
 }
 
-.navbar .close-btn {
+.navbar1 .close-btn {
   color: var(--white);
 
   padding: 4px;
@@ -891,31 +946,31 @@ body.nav-active {
   margin-block: 30px 20px;
 }
 
-.navbar .close-btn ion-icon {
+.navbar1 .close-btn ion-icon {
   --ionicon-stroke-width: 40px;
 }
 
-.navbar .close-btn:is(:hover, :focus-visible) {
+.navbar1 .close-btn:is(:hover, :focus-visible) {
   color: var(--gold-crayola);
 }
 
-.navbar .logo {
+.navbar1 .logo {
   max-width: max-content;
   margin-inline: auto;
   margin-block-end: 60px;
 }
 
-.navbar-list {
+.navbar1-list {
   border-block-end: 1px solid var(--white-alpha-20);
   margin-block-end: 100px;
 
 }
 
-.navbar-item {
+.navbar1-item {
   border-block-start: 1px solid var(--white-alpha-20);
 }
 
-.navbar-link {
+.navbar1-link {
   position: relative;
   font-size: var(--fontSize-label-2);
   text-transform: uppercase;
@@ -923,20 +978,20 @@ body.nav-active {
   max-width: unset;
 }
 
-.navbar-link::after {
+.navbar1-link::after {
   display: none;
 }
 
-.navbar-link .span {
+.navbar1-link .span {
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus-visible, .active) .span {
+.navbar1-link:is(:hover, :focus-visible, .active) .span {
   color: var(--gold-crayola);
 
 }
 
-.navbar-link .separator {
+.navbar1-link .separator {
   position: absolute;
   top: 50%;
   left: 0;
@@ -945,19 +1000,19 @@ body.nav-active {
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus-visible, .active) .separator {
+.navbar1-link:is(:hover, :focus-visible, .active) .separator {
   opacity: 1;
 }
 
-.navbar-title {
+.navbar1-title {
   margin-block-end: 15px;
 }
 
-.navbar-text {
+.navbar1-text {
   margin-block: 10px;
 }
 
-.navbar .body-4 {
+.navbar1 .body-4 {
   color: var(--quick-silver);
 }
 
@@ -967,16 +1022,16 @@ body.nav-active {
 
 
 
-.navbar .text-center .separator {
+.navbar1 .text-center .separator {
   margin-block: 30px;
   margin-inline: auto;
 }
 
-.navbar .contact-label {
+.navbar1 .contact-label {
   margin-block-end: 10px;
 }
 
-.navbar::-webkit-scrollbar-thumb {
+.navbar1::-webkit-scrollbar-thumb {
   background-color: var(--white-alpha-10);
 }
 
@@ -1464,8 +1519,8 @@ body.nav-active {
 .radio-input {
   display: flex;
   flex-direction: row;
-  font-family: var(--fontFamily-forum);
-  font-weight: 400;
+ 
+  font-weight: 300;
   color: white;
 }
 
@@ -1774,7 +1829,7 @@ body.nav-active {
    * HEADER
    */
 
-  .navbar-list {
+  .navbar1-list {
     margin-inline: 30px;
   }
 
@@ -2058,7 +2113,7 @@ body.nav-active {
    */
 
   .nav-open-btn,
-  .navbar>*:not(.navbar-list),
+  .navbar1>*:not(.navbar1-list),
   .header .overlay {
     display: none;
   }
@@ -2068,40 +2123,40 @@ body.nav-active {
 
   }
 
-  .navbar,
-  .navbar.active,
-  .navbar-list {
+  .navbar1,
+  .navbar1.active,
+  .navbar1-list {
     all: unset;
   }
 
-  .navbar,
-  .navbar.active {
+  .navbar1,
+  .navbar1.active {
     margin-inline: auto 20px;
   }
 
-  .navbar-list {
+  .navbar1-list {
     display: flex;
     gap: 30px;
   }
 
-  .navbar-item {
+  .navbar1-item {
     border-block-start: none;
   }
 
-  .navbar .separator {
+  .navbar1 .separator {
     display: none;
   }
 
-  .navbar-link:is(:hover, :focus-visible, .active) .span {
+  .navbar1-link:is(:hover, :focus-visible, .active) .span {
     transform: unset;
   }
 
-  .navbar-link {
+  .navbar1-link {
     font-weight: var(--weight-bold);
     letter-spacing: var(--letterSpacing-1);
   }
 
-  .navbar-link::after {
+  .navbar1-link::after {
     display: block;
   }
 
