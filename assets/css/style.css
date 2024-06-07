@@ -924,7 +924,7 @@ body.nav-active {
   bottom: 0;
   max-width: 360px;
   width: 100%;
-  padding-inline: 30px;
+
   padding-block-end: 50px;
   overflow-y: auto;
   visibility: hidden;

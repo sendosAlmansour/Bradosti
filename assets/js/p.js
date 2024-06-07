@@ -65,7 +65,7 @@ englishp1.onclick=()=>{
 }
 function setLangaugep1(getlangauge){
   for (let i = 0; i < topFontp.length; i++) {
-    topFontp[i].style.fontFamily = "Marhey, sans-serif"
+    topFontp[i].style.fontFamily = "Noto Kufi Arabic, sans-serif"
     
   }
   if(getlangauge==="arabicP1"){

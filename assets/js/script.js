@@ -129,6 +129,7 @@ let topFont = document.querySelectorAll('.topFont')
 let preloadH2 = document.getElementById('preloadH2')
 let title = document.getElementById('title')
 let navitem = document.querySelectorAll('.navbar1-item')
+
 let home = document.getElementById('home')
 let needusDiv = document.getElementById('needusDiv')
 let need = document.getElementById('need')
@@ -165,7 +166,7 @@ function setLangauge(getlangauge) {
   if (getlangauge === "arabic") {
 
     for (let i = 0; i < topFont.length; i++) {
-      topFont[i].style.fontFamily = "Marhey, sans-serif"
+      topFont[i].style.fontFamily = "Noto Kufi Arabic, sans-serif"
       
     }
     title.innerHTML = "جد المكان الذي يلامس روحك"
@@ -173,6 +174,7 @@ function setLangauge(getlangauge) {
     for (let i = 0; i < navitem.length; i++) {
       navitem[i].style.display = "flex";
       navitem[i].style.justifyContent = "end";
+      navitem[i].style.paddingRight='7px'
     }
     needusDiv.innerHTML = ` 
 <div class="radio-input">
