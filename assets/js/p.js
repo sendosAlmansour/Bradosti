@@ -29,6 +29,7 @@ const slideImage=()=>{
 let arabicp1 =document.getElementById('arabicP1')
 let englishp1 =document.getElementById('EnglishP1')
 
+let topFontp = document.querySelectorAll('.fonttopP')
 let titleP1=document.getElementById('titleP1')
 let loc=document.getElementById('loc')
 let fur=document.getElementById('fur')
@@ -63,6 +64,10 @@ englishp1.onclick=()=>{
   setLangaugep1('englishp1')
 }
 function setLangaugep1(getlangauge){
+  for (let i = 0; i < topFontp.length; i++) {
+    topFontp[i].style.fontFamily = "Marhey, sans-serif"
+    
+  }
   if(getlangauge==="arabicP1"){
     titleP1.innerHTML=" شقة للإيجار"
     loc.innerHTML="الموقع"
@@ -88,6 +93,10 @@ function setLangaugep1(getlangauge){
     feaV.innerHTML="خدمة صف السيارات + فرش فندقي كامل + اطلالة برج خليفة + قرب دبي مول + صالة العاب للاطفال"
   }
 else if(getlangauge==="englishp1"){
+  for (let i = 0; i < topFontp.length; i++) {
+    topFontp[i].style.fontFamily = 'Forum, cursive'
+    
+  }
   titleP1.innerHTML="apartment for Rent"
   loc.innerHTML="Location:"
   fur.innerHTML="Furniture:"
