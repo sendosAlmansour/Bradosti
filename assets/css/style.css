@@ -1387,6 +1387,83 @@ body.nav-active {
   border-radius: 10px;
 }
 
+
+.photoGrid{
+display: grid;
+grid-template-columns: auto auto;
+gap: 0.8rem;
+}
+.port-box{
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  border: 2px solid var(--hover-color);
+  box-shadow: 0 0 0.25rem 0.25rem hsla(30, 96%, 44%, 0.25);
+  position: relative;
+  margin-bottom: 8px;
+}
+.port-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.port-image img{
+  width: 100%;
+  opacity: .5s;
+  height: 100%;
+  transition: .5s;
+}
+.port-content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.5s;
+  padding: 0 2rem;
+  opacity: 0;
+  background: linear-gradient(rgba(0,0,0,.2),#ff12a8);
+}
+.port-content h3{
+  font-size: 1.5rem;
+  font-weight: 600;
+
+}
+.port-content p{
+  font-size: .8rem;
+  margin: 5px 0 15px 0;
+
+}
+.port-content a{
+  background: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--hover-color);
+  outline: 2px solid #fff;
+}
+.port-content a i {
+  font-size: 1.3rem;
+  color: var(--seco-bg-color);
+}
+.port-box:hover .port-content{
+  opacity: 1;
+}
+.port-box:hover .port-image img{
+  transform: scale(1.1);
+}
 /*-----------------------------------*\
   #video
 \*-----------------------------------*/
@@ -1520,7 +1597,7 @@ body.nav-active {
   display: flex;
   flex-direction: row;
  
-  font-weight: 300;
+  font-weight: 200;
   color: white;
 }
 
@@ -1532,7 +1609,7 @@ body.nav-active {
   display: flex;
   align-items: center;
   padding: 10px;
-
+font-size: small;
   background-color: #21212191;
   border-radius: 5px;
   margin-right: 12px;
@@ -1787,9 +1864,14 @@ body.nav-active {
     transform: scale(0.7);
   }
 
+  .portfolio-gallary h3{
+  font-size: xx-large;
+  margin: 17px;
+  }
 
-
-
+.photoGrid{
+  gap: 2.8rem;
+}
 
 
 

@@ -133,9 +133,6 @@ let navitem = document.querySelectorAll('.navbar1-item')
 let home = document.getElementById('home')
 let needusDiv = document.getElementById('needusDiv')
 let need = document.getElementById('need')
-let value1 = document.getElementById('val1A')
-let value2 = document.getElementById('val2A')
-let value3 = document.getElementById('val3A')
 let About = document.getElementById('About')
 let Latest = document.getElementById('Latest')
 let Partners = document.getElementById('Partners')
@@ -149,7 +146,7 @@ let aboutus = document.getElementById('aboutus')
 let aboutText = document.getElementById('aboutText')
 let forrent = document.getElementById('forrent')
 let forSale = document.getElementById('forSale')
-let ContactUs = document.getElementById('ContactUs')
+let ContactUs1 = document.getElementById('ContactUs1')
 let ContactText = document.getElementById('ContactText')
 
 
@@ -186,16 +183,14 @@ function setLangauge(getlangauge) {
       href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0">للبيع</a></label>
   <input value="value-3" name="value-radio" id="value-3" type="radio">
   <label for="value-1"><a id="val3A"
-      href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0"> العقارات</a></label>
+      href="https://api.whatsapp.com/send/?phone=%2B971507004348&text&type=phone_number&app_absent=0"> ادارة الاملاك</a></label>
   <p style="margin: auto; margin-left: 0;" id="need"> :أنت بحاجتنا من أجل</p>
   
 </div>
 `
 
     need.innerHTML = 'أنت بحاجتنا من أجل :'
-    value1.innerHTML = 'للأجار '
-    value2.innerHTML = 'للبيع'
-    value3.innerHTML = ' العقارات'
+   
     About.innerHTML = 'من نحن؟'
     Latest.innerHTML = 'أخر العروض'
     Partners.innerHTML = 'شركاءنا'
@@ -209,7 +204,7 @@ function setLangauge(getlangauge) {
     aboutText.innerHTML = " إذا كنت تبحث عن شقة أو عقار للإجار أو البيع فنحن هنا من أجلك"
     forrent.innerHTML = 'للإيجار'
     forSale.innerHTML = 'للبيع'
-    ContactUs.innerHTML = 'تواصل معنا'
+    ContactUs1.innerHTML = 'تواصل معنا'
     ContactText.innerHTML = 'لدينا فريق خبير ومتكامل من أجلك'
   }
 
@@ -258,7 +253,7 @@ function setLangauge(getlangauge) {
     aboutText.innerHTML = 'If you are looking for an apartment or property to buy or rent,We are here for you.'
     forrent.innerHTML = 'For Rent'
     forSale.innerHTML = 'For Sale'
-    ContactUs.innerHTML = 'Contact Us'
+    ContactUs1.innerHTML = 'Contact Us'
     ContactText.innerHTML = ' We have an expert team to help you'
   }
 }
