@@ -125,6 +125,7 @@ window.setInterval(function () {
 
 let arabic = document.getElementById('arabic')
 let english = document.getElementById('English')
+
 let topFont = document.querySelectorAll('.topFont')
 let preloadH2 = document.getElementById('preloadH2')
 let title = document.getElementById('title')

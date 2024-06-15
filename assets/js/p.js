@@ -1,29 +1,42 @@
-const slides = document.querySelectorAll(" .slide")
+let slideImages = document.querySelectorAll('img')
+let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
 var counter =0;
-slides.forEach(
-    (slide ,index)=>{
-        slide.style.left =`${index * 100}%`
-    }
-)
 
-const goNext=()=>{
-    counter++
-    slideImage()
-}
-const goPrev=()=>{
-    counter--
-    slideImage()
-}
-
-const slideImage=()=>{
-    slides.forEach(
-        (slide)=>{
-            slide.style.transform =`translateX(-${counter *100}%)`
-        }
-    )
+next.addEventListener('click', slideNext)
+function slideNext (){
+  slideImages[counter].style.animation='next1 0.5s ease-in forwards';
+  if(counter >= slideImages.length-1){
+    counter=0;
+  }
+  else{
+    counter++;
+  }
+  slideImages[counter].style.animation='next2 0.5s ease-in forwards';
 }
 
 
+prev.addEventListener('click', slidePrev)
+function slidePrev (){
+  slideImages[counter].style.animation='prev1 0.5s ease-in forwards';
+  if(counter ==0){
+    counter=slideImages.length-1;
+  }
+  else{
+    counter--;
+  }
+  slideImages[counter].style.animation='prev2 0.5s ease-in forwards';
+}
+
+
+function autoSliding(){
+  deletInterval = setInterval(timer ,3000);
+  function timer(){
+    slideNext();
+  }
+}
+autoSliding();
 //////////////////////////////////////////////////
 
 let arabicp1 =document.getElementById('arabicP1')
@@ -31,6 +44,8 @@ let englishp1 =document.getElementById('EnglishP1')
 
 let topFontp = document.querySelectorAll('.fonttopP')
 let titleP1=document.getElementById('titleP1')
+let subtitlep1=document.getElementById('subtitlep1')
+
 let loc=document.getElementById('loc')
 let fur=document.getElementById('fur')
 let tow=document.getElementById('tow')
@@ -42,7 +57,7 @@ let ye=document.getElementById('ye')
 let ser=document.getElementById('ser')
 let fea=document.getElementById('fea')
 
-//values/////
+//values p1/////
 
 let locV=document.getElementById('locV')
 let furV=document.getElementById('furV')
@@ -70,6 +85,7 @@ function setLangaugep1(getlangauge){
   }
   if(getlangauge==="arabicP1"){
     titleP1.innerHTML=" شقة للإيجار"
+    subtitlep1.innerHTML="هل تبحث عن شقة للاجار باسعار منافسة؟"
     loc.innerHTML="الموقع"
     fur.innerHTML="الأثاث"
     tow.innerHTML="البرج"
@@ -80,7 +96,7 @@ function setLangaugep1(getlangauge){
     ye.innerHTML="الإيجار السنوي"
     ser.innerHTML="الخدمات"
     fea.innerHTML="الميزات"
-    ////////////////////VALUES
+    ////////////////////VALUES p1
     locV.innerHTML="وسط المدينة"
     furV.innerHTML="مفروشة بالكامل"
     towV.innerHTML="ابر كريست "
@@ -91,6 +107,7 @@ function setLangaugep1(getlangauge){
     yeV.innerHTML=" 180.000 AED"
     serV.innerHTML="جيم + مسبح + سوبر ماركت + صيدلية "
     feaV.innerHTML="خدمة صف السيارات + فرش فندقي كامل + اطلالة برج خليفة + قرب دبي مول + صالة العاب للاطفال"
+   
   }
 else if(getlangauge==="englishp1"){
   for (let i = 0; i < topFontp.length; i++) {
@@ -98,6 +115,7 @@ else if(getlangauge==="englishp1"){
     
   }
   titleP1.innerHTML="apartment for Rent"
+  subtitlep1.innerHTML=" Are you looking for an apartment for rent at competitive prices?"
   loc.innerHTML="Location:"
   fur.innerHTML="Furniture:"
   tow.innerHTML="Tower:"
@@ -108,7 +126,7 @@ else if(getlangauge==="englishp1"){
   ye.innerHTML="Rent Per Year:"
   ser.innerHTML="Services:"
   fea.innerHTML="Features:"
-  //////////////////////VALUES
+  //////////////////////VALUES p1
   locV.innerHTML="Downtown"
   furV.innerHTML="full"
   towV.innerHTML="Upper Crest"
@@ -123,3 +141,9 @@ else if(getlangauge==="englishp1"){
 }
 
 }
+
+
+
+
+/////////////////////////////////////////////////////////////////
+
